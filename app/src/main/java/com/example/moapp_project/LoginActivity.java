@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.loginButton).setOnClickListener(onClickListener);
         findViewById(R.id.gotoPasswordResetButton).setOnClickListener(onClickListener);
     }
-//ㅓㅏㅘㅓ
+//히히
 
     View.OnClickListener onClickListener= new View.OnClickListener(){
         @Override
