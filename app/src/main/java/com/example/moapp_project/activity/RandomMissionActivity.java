@@ -1,4 +1,4 @@
-package com.example.moapp_project;
+package com.example.moapp_project.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.moapp_project.R;
+
 import java.util.Random;
 
     public class RandomMissionActivity extends AppCompatActivity {

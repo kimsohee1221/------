@@ -1,5 +1,6 @@
-package com.example.moapp_project;
+package com.example.moapp_project.activity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,7 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.moapp_project.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,6 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG="MainActivity";
+
 //승연이 시작
     //수민이 시작
     @Override
@@ -28,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         if (user == null) {
-            myStartActivity(SignUpActivity.class);
+            myStartActivity(MemberinitActivity.class);
+            //myStartActivity(SignUpActivity.class);
         } else {
             myStartActivity(CameraActivity.class);
             FirebaseFirestore db = FirebaseFirestore.getInstance();

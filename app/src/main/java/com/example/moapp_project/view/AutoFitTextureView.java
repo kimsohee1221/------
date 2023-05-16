@@ -1,4 +1,4 @@
-package com.example.moapp_project;
+package com.example.moapp_project.view;
 
 import android.content.Context;
 import android.util.AttributeSet;
