@@ -36,7 +36,9 @@
         <activity android:name=".activity.RandomMissionActivity"></activity>
         <activity android:name=".activity.CameraActivity"></activity>
         <activity android:name=".activity.GalleryActivity"></activity>
+        <activity android:name=".activity.BasicActivity"></activity>
         <fragment android:name=".fragment.Camera2BasicFragment"></fragment>
+        <activity android:name=".activity.WritePostActivity"></activity>
     </application>
 
 </manifest>

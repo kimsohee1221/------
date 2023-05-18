@@ -2,6 +2,7 @@ package com.example.moapp_project.activity;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +19,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BasicActivity {
     private static final String TAG="MainActivity";
 
 //승연이 시작
@@ -27,14 +28,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         if (user == null) {
             myStartActivity(MemberinitActivity.class);
             //myStartActivity(SignUpActivity.class);
         } else {
-            myStartActivity(CameraActivity.class);
+//            myStartActivity(CameraActivity.class);
             FirebaseFirestore db = FirebaseFirestore.getInstance();
             DocumentReference docRef = db.collection("users").document(user.getUid());
             docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -57,8 +57,10 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
+
         findViewById(R.id.logoutButton).setOnClickListener(onClickListener);
         findViewById(R.id.random_mission).setOnClickListener(onClickListener);
+        findViewById(R.id.floatingActionButton).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener= new View.OnClickListener() {
@@ -71,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.random_mission:
                     myStartActivity(RandomMissionActivity.class);
+                    break;
+                case R.id.floatingActionButton:
+                    myStartActivity(WritePostActivity.class);
                     break;
             }
         }
