@@ -51,8 +51,8 @@ public class MemberinitActivity extends BasicActivity {
         profileImageView=findViewById(R.id.profileImageView);
         profileImageView.setOnClickListener(onClickListener);
         findViewById(R.id.checkButton).setOnClickListener(onClickListener);
-        findViewById(R.id.picture).setOnClickListener(onClickListener);
-        findViewById(R.id.gallery).setOnClickListener(onClickListener);
+        findViewById(R.id.imageModify).setOnClickListener(onClickListener);
+        findViewById(R.id.videoModify).setOnClickListener(onClickListener);
 
     }
 
@@ -95,10 +95,10 @@ public class MemberinitActivity extends BasicActivity {
                         cardView.setVisibility(View.VISIBLE);
                     }
                     break;
-                case R.id.picture:
+                case R.id.imageModify:
                     myStartActivity(CameraActivity.class);
                     break;
-                case R.id.gallery:
+                case R.id.videoModify:
                     if(ContextCompat.checkSelfPermission(MemberinitActivity.this,
                             android.Manifest.permission.READ_EXTERNAL_STORAGE)
                             != PackageManager.PERMISSION_GRANTED){
