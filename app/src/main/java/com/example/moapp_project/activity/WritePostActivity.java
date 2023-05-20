@@ -234,9 +234,6 @@ public class WritePostActivity extends BasicActivity {
                                             }
                                         }
                                     });
-                                    //contentsList.set(index, uri);
-                                    //taskSnapshot.getMetadata() contains file metadata such as size, content-type, etc.
-                                    // ...
                                 }
                             });
                         } catch (FileNotFoundException e) {
