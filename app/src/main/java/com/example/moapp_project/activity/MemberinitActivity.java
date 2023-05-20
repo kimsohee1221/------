@@ -51,8 +51,8 @@ public class MemberinitActivity extends BasicActivity {
         profileImageView=findViewById(R.id.profileImageView);
         profileImageView.setOnClickListener(onClickListener);
         findViewById(R.id.checkButton).setOnClickListener(onClickListener);
-        findViewById(R.id.picture).setOnClickListener(onClickListener);
-        findViewById(R.id.gallery).setOnClickListener(onClickListener);
+        findViewById(R.id.imageModify).setOnClickListener(onClickListener);
+        findViewById(R.id.videoModify).setOnClickListener(onClickListener);
 
     }
 
@@ -95,10 +95,10 @@ public class MemberinitActivity extends BasicActivity {
                         cardView.setVisibility(View.VISIBLE);
                     }
                     break;
-                case R.id.picture:
+                case R.id.imageModify:
                     myStartActivity(CameraActivity.class);
                     break;
-                case R.id.gallery:
+                case R.id.videoModify:
                     if(ContextCompat.checkSelfPermission(MemberinitActivity.this,
                             android.Manifest.permission.READ_EXTERNAL_STORAGE)
                             != PackageManager.PERMISSION_GRANTED){
@@ -118,7 +118,7 @@ public class MemberinitActivity extends BasicActivity {
         }
     };
 
-    @Override
+
     public void onRequestPermissionResult(int requestCode, String permissions[], int[] grantResults) {
 
         switch (requestCode) {
@@ -211,6 +211,7 @@ public class MemberinitActivity extends BasicActivity {
     private void startToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
+    @SuppressWarnings("deprecation")
     private void myStartActivity(Class c){
 
         Intent intent= new Intent(this,c);
