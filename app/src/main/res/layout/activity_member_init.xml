@@ -106,13 +106,13 @@
             android:padding="5dp">
 
             <Button
-                android:id="@+id/imageModify"
+                android:id="@+id/picture"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="사진촬영" />
 
             <Button
-                android:id="@+id/videoModify"
+                android:id="@+id/gallery"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="갤러리" />

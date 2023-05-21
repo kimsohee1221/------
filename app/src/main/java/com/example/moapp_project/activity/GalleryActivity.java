@@ -39,6 +39,7 @@ public class GalleryActivity extends BasicActivity {
         recyclerView.setAdapter(mAdapter);
     }
 
+    @Override
     public void onRequestPermissionResult(int requestCode, String[] permissions, int[] grantResults) {
 
     }
