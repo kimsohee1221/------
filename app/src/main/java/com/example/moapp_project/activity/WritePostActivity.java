@@ -200,7 +200,7 @@ public class WritePostActivity extends BasicActivity{
                     }
                 });
     }
-//
+
     private void startToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
