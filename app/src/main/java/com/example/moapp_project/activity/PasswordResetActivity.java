@@ -17,7 +17,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class PasswordResetActivity extends BasicActivity {
+public class PasswordResetActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
     @Override
